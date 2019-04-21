@@ -1,0 +1,96 @@
+php v- ............ php version check
+
+cd\ ............... back to previous folder
+d: ................ going to the new folder
+cd server ......... going to the folder's path
+cd mysql .......... same
+cd bin ............ same
+mysql.exe -h localhost -u root -p ...... ready to mysql
+
+
+
+create database coderhousebd;
+
+use coderhousebd;
+
+create table tbl_st(
+id int(11) not null auto increment,
+st_name varchar(100) not null,
+st_roll int(15) not null,
+st_email varchar(100) not null,
+primary key (id)
+);
+
+select * from tbl_st;
+
+select * from tbl_st limit 2;
+
+select * from tbl_st where st_name like 'ta%';
+
+select * from tbl_st where st_name like '%ob';
+
+select * from tbl_st where st_name like '%jr%';
+
+select * from tbl_st where st_name like 'r_hul';
+
+select * from tbl_st where st_name not like 'ta%';
+
+select * from tbl_st where st_age between 20 and 25;
+
+select * from tbl_st where st_age not between 20 and 25;
+
+select * from tbl_st where st_roll in('1002','1004');
+
+select * from tbl_st order by st_roll asc/desc;
+
+select * from tbl_st where st_age>25;
+
+select * from tbl_st where st_age>=25 and st_roll='1001';
+
+select * from tbl_st where st_age>=25 or st_roll='1001';
+
+select * from tbl_st where st_roll=1001;
+
+select id,st_name,st_roll from tbl_st;
+
+select st_age from tbl_st;
+
+select distinct(st_age) from tbl_st;
+
+select avg(st_age) as new_age from tbl_st;
+
+select max(st_age) as new_age from tbl_st;
+
+select min(st_age) as new_age from tbl_st;
+
+select count(st_age) as count_age from tbl_st;
+
+select sum(st_age) as sum_age from tbl_st;
+
+select upper(st_name) as upper_age from tbl_st;
+
+update tbl_st set st_name='' where id=1;
+
+delete from tbl_st where id=4;
+
+
+
+				table link
+	
+	1. prinary key
+	2. foreign key
+	
+	quary:
+	
+	select * from tbl_st t1 join tbl_bank t2 on t1.st_id=t2.st_id;
+	
+	select * from tbl_st t1 left join tbl_bank t2 on t1.st_id=t2.st_id;
+	
+	select * from tbl_st t1 right join tbl_bank t2 on t1.st_id=t2.st_id;
+
+
+
+
+
+
+
